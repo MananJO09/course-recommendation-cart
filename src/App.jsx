@@ -5,11 +5,7 @@ import Sidebar from "./Components/Sidebar";
 import Home from "./pages/Home";
 
 export default function App() {
-
-    <div className="min-h-screen flex items-center justify-center bg-blue-500 text-white text-3xl">
-      Tailwind is working 🎉
-    </div>
-    
+  
   const [courses, setCourses] = useState(sampleCourses);
   const [dark, setDark] = useState(false);
   const [xp, setXp] = useState(0);
@@ -31,9 +27,10 @@ export default function App() {
   const toggleStatus = (id) => {
     setCourses(courses.map(c => {
       if (c.id === id) {
-        if (c.status === "Completed") return { ...c, status: "In Progress" };
-        else {
-          setXp(xp + 50); // add XP
+        if (c.status === "Completed") {
+          return { ...c, status: "In Progress" };
+        } else {
+          setXp(xp + 50);
           return { ...c, status: "Completed" };
         }
       }
@@ -42,18 +39,24 @@ export default function App() {
   };
 
   return (
-    <div className={dark ? "dark bg-gray-900 text-white" : ""}>
+    <div className={dark ? "dark bg-gray-900 text-white min-h-screen" : "min-h-screen bg-gray-100"}>
+      {/* NAVBAR */}
       <Navbar
         onSortDifficulty={sortByDifficulty}
         onSortName={sortByName}
         onToggleDark={() => setDark(!dark)}
       />
-      <div className="flex">
+
+      {/* MAIN CONTENT */}
+      <div className="flex gap-4 p-4">
+        {/* COURSE GRID */}
         <Home
           courses={courses}
           onToggleFavorite={toggleFavorite}
           onToggleStatus={toggleStatus}
         />
+
+        {/* SIDEBAR */}
         <Sidebar xp={xp} level={Math.floor(xp / 100) + 1} />
       </div>
     </div>
