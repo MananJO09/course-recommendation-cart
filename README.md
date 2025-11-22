@@ -1,21 +1,38 @@
-<<<<<<< HEAD
-# React + Vite
+📘 Course Activity Recommender Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive web app that helps users browse courses and view recommended learning activities based on difficulty level. Each course is displayed as a card, allowing users to mark favorites, track progress, and quickly discover what to study next.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Card-based course display
 
-## React Compiler
+Difficulty-based activity recommendations
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Mark as favorite / toggle status
 
-## Expanding the ESLint configuration
+Clean UI using React + Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# course-recommendation-cart
-Course Activity Recommender Cart is a simple tool that displays courses with difficulty levels and suggests suitable learning activities. Users can mark favorites, track progress, and quickly find what to study next through a clean, interactive card-based interface.
->>>>>>> 9986ceb95c3f5419c479948c7722da7772b665f5
+Fully responsive layout
+
+🛠️ Tech Stack
+
+React.js
+
+Tailwind CSS
+
+JavaScript (ES6+)
+
+📂 Project Setup
+npm install
+npm run dev
+
+📄 Folder Structure
+src/
+ ├─ components/
+ ├─ data/
+ ├─ styles/
+ └─ App.jsx
+
+🎯 Purpose
+
+Helps learners organize courses, track progress, and access suitable activities instantly through a minimal and efficient interface.
